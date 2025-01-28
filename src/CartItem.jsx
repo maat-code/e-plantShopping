@@ -41,6 +41,10 @@ const CartItem = ({ onContinueShopping }) => {
     return price * item.quantity;
   };
 
+  const handleCheckout = () => {
+    alert("Checkout feature is not available yet. Please continue shopping.");
+  };
+
   return (
     <div className="cart-container">
       <h2 style={{ color: "black" }}>Total Cart Amount: ${calculateTotalAmount()}</h2>
@@ -74,7 +78,9 @@ const CartItem = ({ onContinueShopping }) => {
           Continue Shopping
         </button>
         <br />
-        <button className="get-started-button1">Checkout</button>
+        <button className="get-started-button1" onClick={() => handleCheckout()}>
+          Checkout
+        </button>
       </div>
     </div>
   );
